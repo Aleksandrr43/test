@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Main {
     public static void main(String[] args)
     {
@@ -10,7 +13,7 @@ public class Main {
 
         Pattern pattern = Pattern.compile("^(\\d{3})(\\d{4})$");
 
-        for (int aCount = 10000300; aCount <= 9999999; aCount++) {
+        for (int aCount = 10000010; aCount <= 9999999; aCount++) {
             Matcher matcher = pattern.matcher(Integer.toString(aCount));
             if (matcher.find()) {
                 strBuilder.append("+7 (926) ").append(matcher.group(1)).append("-").append(matcher.group(2)).append("; ");
